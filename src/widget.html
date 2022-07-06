@@ -14,17 +14,6 @@
             VSS.register("Widget", function () {                
                 return {
                     load: function (WidgetSettings) {
-                        var settings = JSON.parse(WidgetSettings.customSettings.data);
-
-                        var $title = $('#title');
-                        $title.text(settings?.title ?? 'Titulo');
-
-                        var $subtitle = $('#sub-title');
-                        $subtitle.text(settings?.subtitle ?? 'Subtitulo');
-
-                        var $content = $('#content');
-                        $content.text(settings?.content ?? 'Conteudo');
-
                         return WidgetHelpers.WidgetStatusHelper.Success();
                     }
                 }
@@ -38,12 +27,12 @@
     <div class="widget">
         <div class="title-area">
             <div class="title">
-                <div class="inner-title" id="title">T&iacute;tulo</div>
-                <div class="subtitle" id="sub-title">Subt&iacute;tulo</div>
+                <div class="inner-title" id="title">Title</div>
+                <div class="subtitle" id="sub-title">Subtitle</div>
             </div>
         </div>
         <div class="content" id="content">
-            Conte&uacute;do
+            Content
         </div>
     </div>
 </body>
